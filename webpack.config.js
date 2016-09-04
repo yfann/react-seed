@@ -1,12 +1,12 @@
-import webpack from 'webpack'
+ var webpack = require('webpack')
 
 
 module.exports={
-    entry:[],
+    entry:['./src/index.js'],
     output:{
         filename:'[name].bundle.js',
         publicPath:'/scripts/',
-        path:__dirname__+"/dist/scripts",
+        path:__dirname+"/dist/scripts",
     },
     module:{
         loaders:[
