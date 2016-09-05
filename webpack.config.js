@@ -1,5 +1,5 @@
- var webpack = require('webpack')
-
+var webpack = require('webpack')
+var HtmlPlugin=require('html-webpack-plugin')
 
 module.exports={
     entry:['./src/index.js'],
@@ -23,5 +23,11 @@ module.exports={
     resolve:{
         extensions:['','.jsx','.js']
     },
-    plugins:[]
+    plugins:[
+        new HtmlPlugin({
+            title:'react seed',
+            filename:__dirname+'/dist/index.html',
+            template:__dirname+'/src/assets/index.html'
+        })
+    ]
 }
